@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp">
+
+        <!-- 1. Logo & Shadow Section -->
+        <FrameLayout
+            android:layout_width="180dp"
+            android:layout_height="180dp">
+
+            <!-- Lớp bóng đổ (Shadow) -->
+            <ImageView
+                android:id="@+id/logo_shadow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:alpha="0.25"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_frog2"
+                app:tint="#000000" />
+
+            <!-- Logo chính -->
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_frog2" />
+        </FrameLayout>
+
+        <!-- 2. Tên ứng dụng (SF REVIEW) -->
+        <TextView
+            android:id="@+id/txtAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.05"
+            android:shadowColor="#40000000"
+            android:shadowDx="0"
+            android:shadowDy="4"
+            android:shadowRadius="8"
+            android:text="SF REVIEW"
+            android:textColor="@color/light_blue_600"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <!-- 3. Slogan -->
+        <TextView
+            android:id="@+id/txtSlogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:alpha="0.85"
+            android:gravity="center"
+            android:letterSpacing="0.02"
+            android:text="Sân chơi ẩm thực cho sinh viên toàn quốc"
+            android:textAlignment="center"
+            android:textColor="#006064"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+    <!-- Footer Version -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:alpha="0.5"
+        android:text="Version 1.0.0"
+        android:textColor="#006064"
+        android:textSize="12sp" />
+
+</RelativeLayout>

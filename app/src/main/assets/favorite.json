@@ -1,0 +1,37 @@
+[
+  {
+    "favoriteId": "FAV_01",
+    "userId": "STU_01",
+    "refId": "RES_01",
+    "refType": "RESTAURANT",
+    "createdAt": 1712415600000
+  },
+  {
+    "favoriteId": "FAV_02",
+    "userId": "STU_01",
+    "refId": "RES_03",
+    "refType": "RESTAURANT",
+    "createdAt": 1712416200000
+  },
+  {
+    "favoriteId": "FAV_03",
+    "userId": "STU_01",
+    "refId": "RES_06",
+    "refType": "RESTAURANT",
+    "createdAt": 1712416800000
+  },
+  {
+    "favoriteId": "FAV_04",
+    "userId": "STU_02",
+    "refId": "RES_01",
+    "refType": "RESTAURANT",
+    "createdAt": 1712417400000
+  },
+  {
+    "favoriteId": "FAV_05",
+    "userId": "STU_02",
+    "refId": "RES_12",
+    "refType": "RESTAURANT",
+    "createdAt": 1712418000000
+  }
+]

@@ -1,0 +1,7 @@
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/imgReview"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:scaleType="centerCrop"
+    android:layout_marginEnd="6dp"
+    android:background="#eee"/>

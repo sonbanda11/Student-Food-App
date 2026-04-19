@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="28dp"
+    android:background="@drawable/bg_card"
+    android:elevation="6dp">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_location"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="Bật vị trí để xem quán gần bạn"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:text="Cho phép truy cập vị trí để chúng tôi đề xuất những quán ăn ngon nhất ở ngay gần bạn"
+        android:textColor="#666666" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/btn_pick_location"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textStyle="bold"
+            android:text="Chọn vị trí"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/bg_category"/>
+
+        <TextView
+            android:id="@+id/btn_enable_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_shadow_blue"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Tiếp tục"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

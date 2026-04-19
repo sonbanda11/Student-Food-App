@@ -1,0 +1,89 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- GOOGLE MAP -->
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- MARKER GIẢ (CENTER) -->
+    <ImageView
+        android:id="@+id/imgMarker"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_maker"
+        android:layout_gravity="center"
+        android:elevation="6dp"/>
+
+    <!-- ADDRESS BOX -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="top"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_gradient_border"
+        android:elevation="6dp"
+        android:paddingHorizontal="12dp">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_location"/>
+
+        <TextView
+            android:id="@+id/txtAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="Đang lấy địa chỉ..."
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- NÚT VỊ TRÍ HIỆN TẠI -->
+    <ImageView
+        android:id="@+id/btnMyLocation"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="90dp"
+        android:background="@drawable/bg_gradient_border_circle"
+        android:elevation="6dp"
+        android:padding="12dp"
+        android:src="@drawable/ic_my_location"
+        app:tint="@color/light_blue_600" />
+
+      <!-- NÚT XÁC NHẬN -->
+    <TextView
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="26dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_shadow_blue_radius"
+        android:elevation="6dp"
+        android:text="Xác nhận vị trí"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

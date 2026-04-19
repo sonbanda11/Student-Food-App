@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg_toolbar_gradient"
+    android:padding="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="24dp">
+
+            <!-- TITLE -->
+            <TextView
+                android:id="@+id/tvRegisterTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đăng ký"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/gray_600"
+                android:layout_marginBottom="28dp"/>
+
+            <!-- INPUT STYLE TEMPLATE -->
+            <!-- FULL NAME -->
+            <LinearLayout
+                style="@style/InputBox">
+
+                <ImageView
+                    android:src="@drawable/ic_person"
+                    style="@style/IconStyle"/>
+
+                <EditText
+                    android:id="@+id/edtFullName"
+                    android:hint="Họ và tên"
+                    android:inputType="textPersonName"
+                    style="@style/EditTextStyle"/>
+            </LinearLayout>
+
+            <!-- USERNAME -->
+            <LinearLayout style="@style/InputBox">
+                <ImageView android:src="@drawable/ic_person" style="@style/IconStyle"/>
+                <EditText
+                    android:id="@+id/edtUsername"
+                    android:hint="Tên đăng nhập"
+                    style="@style/EditTextStyle"/>
+            </LinearLayout>
+
+            <!-- EMAIL -->
+            <LinearLayout style="@style/InputBox">
+                <ImageView android:src="@drawable/ic_email" style="@style/IconStyle"/>
+                <EditText
+                    android:id="@+id/edtEmail"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    style="@style/EditTextStyle"/>
+            </LinearLayout>
+
+            <!-- PHONE -->
+            <LinearLayout style="@style/InputBox">
+                <ImageView
+                    android:src="@drawable/ic_phone"
+                    style="@style/IconStyle"/>
+                <EditText
+                    android:id="@+id/edtPhone"
+                    android:hint="Số điện thoại"
+                    android:inputType="phone"
+                    style="@style/EditTextStyle"/>
+            </LinearLayout>
+
+            <!-- PASSWORD -->
+            <LinearLayout style="@style/InputBox">
+                <ImageView
+                    android:src="@drawable/ic_lock"
+                    style="@style/IconStyle"/>
+                <EditText
+                    android:id="@+id/edtPassword"
+                    android:hint="Mật khẩu"
+                    android:inputType="textPassword"
+                    style="@style/EditTextStyle"/>
+            </LinearLayout>
+
+            <!-- CONFIRM -->
+            <LinearLayout style="@style/InputBox">
+                <ImageView
+                    android:src="@drawable/ic_lock"
+                    style="@style/IconStyle"/>
+                <EditText
+                    android:id="@+id/edtConfirmPassword"
+                    android:hint="Xác nhận mật khẩu"
+                    android:inputType="textPassword"
+                    style="@style/EditTextStyle"/>
+            </LinearLayout>
+
+            <!-- ROLE -->
+            <LinearLayout
+                style="@style/InputBox"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:src="@drawable/ic_person"
+                    style="@style/IconStyle" />
+
+                <TextView
+                    android:id="@+id/tvRole"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingStart="12dp"
+                    android:text="Chọn vai trò"
+                    android:textColor="#9E9E9E"
+                    android:clickable="true"/>
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/ic_arrow_down"
+                    app:tint="#888888"
+                    android:layout_marginEnd="12dp"/>
+
+            </LinearLayout>
+
+            <!-- UNI -->
+            <LinearLayout
+                android:id="@+id/layoutUniInput"
+                style="@style/InputBox"
+                android:visibility="gone">
+
+                <ImageView
+                    android:src="@drawable/ic_edit"
+                    style="@style/IconStyle"/>
+
+                <EditText
+                    android:id="@+id/edtUniversity"
+                    android:hint="Tên trường đại học"
+                    style="@style/EditTextStyle"/>
+
+            </LinearLayout>
+
+            <!-- LICENSE -->
+            <LinearLayout
+                android:id="@+id/layoutLicenseInput"
+                style="@style/InputBox"
+                android:visibility="gone">
+
+                <ImageView
+                    android:src="@drawable/ic_policy"
+                    style="@style/IconStyle"/>
+
+                <EditText
+                    android:id="@+id/edtLicense"
+                    android:hint="Mã giấy phép"
+                    style="@style/EditTextStyle"/>
+
+            </LinearLayout>
+
+            <!-- BUTTON (FIX CHUẨN) -->
+            <TextView
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_shadow_blue"
+                android:gravity="center"
+                android:text="Đăng ký"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"/>
+
+            <!-- LOGIN -->
+            <TextView
+                android:id="@+id/tvLoginRedirect"
+                android:layout_marginTop="12dp"
+                android:text="Đã có tài khoản? Đăng nhập"
+                android:textColor="@color/light_blue_800"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

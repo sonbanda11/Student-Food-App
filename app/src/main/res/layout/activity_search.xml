@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- include toolbar -->
+    <include layout="@layout/layout_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_gradient_border"
+        android:elevation="2dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="10dp">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_search"
+            app:tint="@color/light_blue_400"/>
+
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="Tìm quán ăn, món ăn..."
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="#212121"
+            android:textColorHint="#9E9E9E"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/btnClear"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_close"
+            android:visibility="gone"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="#9E9E9E" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layoutHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="10dp"
+                            android:text="Lịch sử tìm kiếm"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/btnClearHistory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="Xóa tất cả"
+                            android:textColor="#F44336"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/historyContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        app:flexWrap="wrap"
+                        app:justifyContent="flex_start" />
+                </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+                  <TextView
+                      android:id="@+id/txtSuggest"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="16dp"
+                      android:text="Danh mục món ăn"
+                      android:layout_marginStart="26dp"
+                      android:textColor="@color/black"
+                      android:textSize="16sp"
+                      android:textStyle="bold" />
+
+                  <androidx.recyclerview.widget.RecyclerView
+                      android:id="@+id/recyclerSuggestFood"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="12dp"
+                      android:nestedScrollingEnabled="false"
+                      app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                      app:spanCount="3"
+                      tools:listitem="@layout/item_category_search" />
+              </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_my_posts"
+            android:icon="@drawable/ic_edit"
+            android:title="Bài viết của tôi"/>
+
+        <item
+            android:id="@+id/nav_saved_posts"
+            android:icon="@drawable/ic_favorite"
+            android:title="Bài viết đã lưu"/>
+
+        <item
+            android:id="@+id/nav_saved_videos"
+            android:icon="@drawable/ic_frog"
+            android:title="Video đã lưu"/>
+
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/nav_filter_location"
+            android:icon="@drawable/ic_location"
+            android:title="Lọc địa điểm"/>
+
+        <item
+            android:id="@+id/nav_my_reviews"
+            android:icon="@drawable/ic_my_review"
+            android:title="Đánh giá của tôi"/>
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_setting"
+            android:title="Cài đặt cộng đồng"/>
+    </group>
+
+</menu>

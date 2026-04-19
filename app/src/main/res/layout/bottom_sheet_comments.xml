@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg_home_card">
+
+    <!-- Handle -->
+    <View
+        android:layout_width="30dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_btn_shadow"/>
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bình luận"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="12dp"/>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0F0F0"/>
+
+    <!-- Comment list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvComments"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:clipToPadding="false"
+        android:paddingVertical="8dp"/>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0F0F0"/>
+
+    <!-- Input row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="12dp"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:id="@+id/imgCommentAvatar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_person"
+            android:background="@drawable/bg_gradient_border_circle"
+            android:scaleType="centerCrop"/>
+
+        <EditText
+            android:id="@+id/edtComment"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="8dp"
+            android:hint="Viết bình luận..."
+            android:textColorHint="#AAAAAA"
+            android:background="@drawable/bg_gradient_border"
+            android:paddingHorizontal="12dp"
+            android:textSize="14sp"
+            android:importantForAutofill="no"/>
+
+        <ImageView
+            android:id="@+id/btnSendComment"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_share"
+            app:tint="#2196F3"
+            android:padding="6dp"
+            android:background="@drawable/bg_circle"/>
+    </LinearLayout>
+
+</LinearLayout>

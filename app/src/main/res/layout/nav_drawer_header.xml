@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:padding="16dp"
+    android:background="@color/light_blue_600">
+
+    <ImageView
+        android:id="@+id/navHeaderAvatar"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/ic_person"
+        android:background="@drawable/bg_circle"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/navHeaderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên người dùng"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/navHeaderEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="email@example.com"
+        android:textColor="#CCFFFFFF"
+        android:textSize="13sp"/>
+</LinearLayout>

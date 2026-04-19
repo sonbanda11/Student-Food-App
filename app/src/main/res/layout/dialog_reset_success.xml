@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="26dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="28dp"
+    android:background="@drawable/bg_card"
+    android:elevation="6dp">
+
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_frog2"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Khôi phục thành công"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Tên đăng nhập:"
+                android:textColor="#757575"/>
+            <TextView
+                android:id="@+id/tvResultUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="admin123"
+                android:textStyle="bold"
+                android:textColor="#212121"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Mật khẩu mới:"
+                android:textColor="#757575"/>
+            <TextView
+                android:id="@+id/tvResultPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="********"
+                android:textStyle="bold"
+                android:textColor="#212121"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnDone"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_shadow_blue"
+            android:text="HOÀN TẤT"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+</LinearLayout>

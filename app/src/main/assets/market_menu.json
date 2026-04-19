@@ -1,0 +1,106 @@
+[
+  {
+    "itemId": "MKT_ITEM_01",
+    "categoryName": "Khu rau",
+    "name": "Rau muống",
+    "description": "Rau muống tươi ngon, hái buổi sáng",
+    "price": 5000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ipomoea_aquatica_blanco1.314.jpg/240px-Ipomoea_aquatica_blanco1.314.jpg"
+  },
+  {
+    "itemId": "MKT_ITEM_02",
+    "categoryName": "Khu rau",
+    "name": "Cải xanh",
+    "description": "Cải xanh sạch, không thuốc trừ sâu",
+    "price": 8000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Brassica_juncea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-025.jpg/240px-Brassica_juncea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-025.jpg"
+  },
+  {
+    "itemId": "MKT_ITEM_03",
+    "categoryName": "Khu rau",
+    "name": "Bắp cải",
+    "description": "Bắp cải tươi, cuộn chặt",
+    "price": 12000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Cabbage_and_cross_section_on_white.jpg/240px-Cabbage_and_cross_section_on_white.jpg"
+  },
+  {
+    "itemId": "MKT_ITEM_04",
+    "categoryName": "Khu rau",
+    "name": "Cà chua",
+    "description": "Cà chua đỏ tươi 500g",
+    "price": 15000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tomato_je.jpg/240px-Tomato_je.jpg"
+  },
+  {
+    "itemId": "MKT_ITEM_05",
+    "categoryName": "Thịt gà",
+    "name": "Gà ta nguyên con",
+    "description": "Gà ta thả vườn, thịt chắc ngọt",
+    "price": 120000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/240px-Good_Food_Display_-_NCI_Visuals_Online.jpg"
+  },
+  {
+    "itemId": "MKT_ITEM_06",
+    "categoryName": "Thịt gà",
+    "name": "Đùi gà",
+    "description": "Đùi gà tươi, 1kg",
+    "price": 65000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/240px-Good_Food_Display_-_NCI_Visuals_Online.jpg"
+  },
+  {
+    "itemId": "MKT_ITEM_07",
+    "categoryName": "Thịt bò",
+    "name": "Thịt bò thăn",
+    "description": "Thịt bò thăn tươi, 500g",
+    "price": 180000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Standing_rib_roast.jpg/240px-Standing_rib_roast.jpg"
+  },
+  {
+    "itemId": "MKT_ITEM_08",
+    "categoryName": "Thịt bò",
+    "name": "Bắp bò",
+    "description": "Bắp bò tươi, phù hợp nấu phở",
+    "price": 150000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Standing_rib_roast.jpg/240px-Standing_rib_roast.jpg"
+  },
+  {
+    "itemId": "MKT_ITEM_09",
+    "categoryName": "Cá & Hải sản",
+    "name": "Cá trắm",
+    "description": "Cá trắm tươi sống, 1kg",
+    "price": 80000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Shrimps.jpg/240px-Shrimps.jpg"
+  },
+  {
+    "itemId": "MKT_ITEM_10",
+    "categoryName": "Cá & Hải sản",
+    "name": "Tôm sú",
+    "description": "Tôm sú tươi, 500g",
+    "price": 200000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Shrimps.jpg/240px-Shrimps.jpg"
+  },
+  {
+    "itemId": "MKT_ITEM_11",
+    "categoryName": "Cá & Hải sản",
+    "name": "Cá chép",
+    "description": "Cá chép tươi sống, 1kg",
+    "price": 70000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Shrimps.jpg/240px-Shrimps.jpg"
+  },
+  {
+    "itemId": "MKT_ITEM_12",
+    "categoryName": "Gia vị",
+    "name": "Hành tím",
+    "description": "Hành tím khô, 500g",
+    "price": 20000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tomato_je.jpg/240px-Tomato_je.jpg"
+  },
+  {
+    "itemId": "MKT_ITEM_13",
+    "categoryName": "Gia vị",
+    "name": "Tỏi",
+    "description": "Tỏi khô, 200g",
+    "price": 15000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tomato_je.jpg/240px-Tomato_je.jpg"
+  }
+]

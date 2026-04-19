@@ -1,0 +1,115 @@
+// ==================== Add these methods to PlaceDetailActivity.java ====================
+
+/**
+ * Update UI using OSMMapper
+ */
+private void updateUIWithOSMMapper(String placeId) {
+    try {
+        // Get OSM tags from repository or database
+        java.util.Map<String, String> osmTags = getOsmTagsFromDatabase(placeId);
+        
+        if (osmTags != null) {
+            // Map OSM tags to UI-ready data
+            com.example.studentfood.data.mapper.OSMMapper.OSMData data = com.example.studentfood.data.mapper.OSMMapper.map(osmTags);
+            
+            android.util.Log.d("PlaceDetail", "=== OSMMapper Data ===");
+            android.util.Log.d("PlaceDetail", "Name: " + data.name);
+            android.util.Log.d("PlaceDetail", "Type: " + data.typeLabel);
+            android.util.Log.d("PlaceDetail", "Cuisine: " + data.cuisineLabel);
+            android.util.Log.d("PlaceDetail", "Address: " + data.address);
+            android.util.Log.d("PlaceDetail", "Status: " + data.statusText);
+            
+            // Update UI with mapped data
+            updateUIComponents(data);
+        } else {
+            android.util.Log.w("PlaceDetail", "No OSM tags found for place: " + placeId);
+        }
+    } catch (Exception e) {
+        android.util.Log.e("PlaceDetail", "Error using OSMMapper", e);
+    }
+}
+
+/**
+ * Get OSM tags from database
+ */
+private java.util.Map<String, String> getOsmTagsFromDatabase(String placeId) {
+    try {
+        // Use OsmTagsDAO to get tags
+        com.example.studentfood.data.local.dao.OsmTagsDAO osmTagsDAO = 
+            new com.example.studentfood.data.local.dao.OsmTagsDAO(categoryDAO.getReadableDatabase());
+        return osmTagsDAO.getOsmTags(placeId);
+    } catch (Exception e) {
+        android.util.Log.e("PlaceDetail", "Error getting OSM tags from DB", e);
+        return null;
+    }
+}
+
+/**
+ * Update UI components with OSMData
+ */
+private void updateUIComponents(com.example.studentfood.data.mapper.OSMMapper.OSMData data) {
+    // Update status with color
+    if (txtStatus != null) {
+        txtStatus.setText(data.statusText);
+        txtStatus.setTextColor(data.isOpen ? 
+            getColor(android.R.color.holo_green_dark) : 
+            getColor(android.R.color.holo_red_dark));
+    }
+    
+    // Show/hide cuisine if available
+    if (txtCuisine != null && layoutCuisine != null) {
+        if (data.hasCuisine()) {
+            txtCuisine.setText(data.cuisineLabel);
+            layoutCuisine.setVisibility(View.VISIBLE);
+        } else {
+            layoutCuisine.setVisibility(View.GONE);
+        }
+    }
+    
+    // Show/hide phone if available
+    if (txtPhone != null && layoutPhone != null) {
+        if (data.hasPhone()) {
+            txtPhone.setText(data.phone);
+            layoutPhone.setVisibility(View.VISIBLE);
+        } else {
+            layoutPhone.setVisibility(View.GONE);
+        }
+    }
+    
+    // Show/hide website if available
+    if (txtWebsite != null && layoutWebsite != null) {
+        if (data.hasWebsite()) {
+            txtWebsite.setText(data.website);
+            layoutWebsite.setVisibility(View.VISIBLE);
+        } else {
+            layoutWebsite.setVisibility(View.GONE);
+        }
+    }
+    
+    // Show/hide description if available
+    if (txtDescription != null && layoutDescription != null) {
+        if (data.hasDescription()) {
+            txtDescription.setText(data.description);
+            layoutDescription.setVisibility(View.VISIBLE);
+        } else {
+            layoutDescription.setVisibility(View.GONE);
+        }
+    }
+}
+
+// ==================== IMPORTANT NOTE ====================
+
+// Make sure your PlaceDetailActivity has these field declarations:
+// private TextView txtStatus, txtCuisine, txtPhone, txtWebsite, txtDescription;
+// private LinearLayout layoutCuisine, layoutPhone, layoutWebsite, layoutDescription;
+
+// And these initializations in setupCommonViews():
+// txtStatus = findViewById(R.id.txtStatus);
+// txtCuisine = findViewById(R.id.txtCuisine);
+// txtPhone = findViewById(R.id.txtOsmPhone);        // <-- IMPORTANT: Use OsmPhone ID
+// txtWebsite = findViewById(R.id.txtOsmWebsite);    // <-- IMPORTANT: Use OsmWebsite ID
+// txtDescription = findViewById(R.id.txtOsmDescription); // <-- IMPORTANT: Use OsmDescription ID
+// layoutCuisine = findViewById(R.id.layoutCuisine);
+// layoutPhone = findViewById(R.id.layoutPhone);
+// layoutWebsite = findViewById(R.id.layoutWebsite);
+// layoutDescription = findViewById(R.id.layoutDescription);

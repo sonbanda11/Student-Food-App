@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <include
+        android:id="@+id/layoutToolbar"
+        layout="@layout/layout_toolbar"/>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:gravity="center"
+       android:padding="24dp">
+
+       <TextView
+           android:id="@+id/txtDetailTitle"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="20sp"
+           android:textStyle="bold"
+           android:textColor="@android:color/black"
+           android:gravity="center"
+           android:text="Tiêu đề thông báo"/>
+
+       <TextView
+           android:id="@+id/txtTime"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="13sp"
+           android:textColor="#888"
+           android:layout_marginTop="8dp"
+           android:gravity="center"
+           android:text="10:00 01/01/2024"/>
+
+       <View
+           android:layout_width="60dp"
+           android:layout_height="1dp"
+           android:background="#EEE"
+           android:layout_marginVertical="20dp"/>
+
+       <TextView
+           android:id="@+id/txtContent"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="16sp"
+           android:textColor="#444"
+           android:lineSpacingExtra="4dp"
+           android:gravity="center"
+           android:text="Nội dung chi tiết của thông báo sẽ được hiển thị tại đây để người dùng có thể đọc rõ ràng."/>
+
+   </LinearLayout>
+
+
+</LinearLayout>

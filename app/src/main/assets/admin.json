@@ -1,0 +1,47 @@
+[
+  {
+    "userId": "ADM_01",
+    "username": "son_superadmin",
+    "password": "rootpassword",
+    "email": "sonviethust@gmail.com",
+    "fullName": "Nguyễn Viết Sơn",
+    "phoneNumber": "0988776655",
+    "avatarUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "role": "ADMIN",
+    "status": true,
+    "createdAt": 1711908000000,
+    "staffId": "STF_01",
+    "adminLevel": 2,
+    "permissions": ["FULL_CONTROL", "MANAGE_USER", "MANAGE_SHOP", "DELETE_POST", "VIEW_REVENUE"]
+  },
+  {
+    "userId": "ADM_02",
+    "username": "nga_admin",
+    "password": "adminpassword",
+    "email": "hangnga_mod@gmail.com",
+    "fullName": "Hằng Nga",
+    "phoneNumber": "0988123456",
+    "avatarUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "role": "ADMIN",
+    "status": true,
+    "createdAt": 1711918800000,
+    "staffId": "STF_02",
+    "adminLevel": 1,
+    "permissions": ["MANAGE_USER", "DELETE_POST", "VERIFY_SHOP"]
+  },
+  {
+    "userId": "ADM_03",
+    "username": "mod_support01",
+    "password": "modpassword",
+    "email": "support01@studentfood.com",
+    "fullName": "Lê Văn Duyệt",
+    "phoneNumber": "0911223344",
+    "avatarUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "role": "ADMIN",
+    "status": true,
+    "createdAt": 1711929600000,
+    "staffId": "STF_03",
+    "adminLevel": 1,
+    "permissions": ["DELETE_REVIEW", "CHAT_SUPPORT"]
+  }
+]

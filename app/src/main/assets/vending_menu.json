@@ -1,0 +1,82 @@
+[
+  {
+    "itemId": "VND_ITEM_01",
+    "categoryName": "Nước ngọt",
+    "name": "Coca Cola",
+    "description": "Lon 330ml lạnh",
+    "price": 15000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  },
+  {
+    "itemId": "VND_ITEM_02",
+    "categoryName": "Nước ngọt",
+    "name": "Pepsi",
+    "description": "Lon 330ml lạnh",
+    "price": 15000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  },
+  {
+    "itemId": "VND_ITEM_03",
+    "categoryName": "Nước ngọt",
+    "name": "Sprite",
+    "description": "Lon 330ml lạnh",
+    "price": 15000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  },
+  {
+    "itemId": "VND_ITEM_04",
+    "categoryName": "Nước suối",
+    "name": "Aquafina",
+    "description": "Chai 500ml",
+    "price": 10000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  },
+  {
+    "itemId": "VND_ITEM_05",
+    "categoryName": "Nước suối",
+    "name": "Lavie",
+    "description": "Chai 500ml",
+    "price": 10000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  },
+  {
+    "itemId": "VND_ITEM_06",
+    "categoryName": "Trà & Cà phê",
+    "name": "Trà xanh 0 độ",
+    "description": "Chai 450ml",
+    "price": 12000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  },
+  {
+    "itemId": "VND_ITEM_07",
+    "categoryName": "Trà & Cà phê",
+    "name": "Cà phê lon",
+    "description": "Lon 235ml, cà phê sữa",
+    "price": 18000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  },
+  {
+    "itemId": "VND_ITEM_08",
+    "categoryName": "Trà & Cà phê",
+    "name": "Trà đào",
+    "description": "Chai 455ml, vị đào thơm",
+    "price": 15000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  },
+  {
+    "itemId": "VND_ITEM_09",
+    "categoryName": "Snack",
+    "name": "Snack Oishi",
+    "description": "Gói 40g, vị tôm",
+    "price": 10000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  },
+  {
+    "itemId": "VND_ITEM_10",
+    "categoryName": "Snack",
+    "name": "Kẹo cao su",
+    "description": "Hộp 10 viên",
+    "price": 8000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  }
+]

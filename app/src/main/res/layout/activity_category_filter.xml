@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <include
+        android:id="@+id/layoutToolbar"
+        layout="@layout/layout_toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Dùng NestedScrollView và ràng buộc vào Toolbar + Footer để có thể cuộn -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/layoutToolbar"
+        app:layout_constraintBottom_toTopOf="@+id/layoutButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp">
+
+            <!-- KHOẢNG GIÁ -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Khoảng giá"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:textColor="#fff"
+                android:background="@drawable/bg_gradient_lr"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="16dp">
+
+                <EditText
+                    android:id="@+id/edtPriceMin"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:hint="Từ"
+                    android:inputType="number"
+                    android:padding="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:src="@drawable/ic_arrow_right"
+                    app:tint="@color/light_blue_400" />
+
+                <EditText
+                    android:id="@+id/edtPriceMax"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:hint="Đến"
+                    android:inputType="number"
+                    android:padding="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:columnCount="2"
+                android:paddingHorizontal="15dp"
+                android:useDefaultMargins="true">
+
+                <TextView
+                    android:id="@+id/btnPrice0_30"
+                    android:layout_width="0dp"
+                    android:layout_height="37dp"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:text="0 - 30.000đ"
+                    android:background="@drawable/bg_tag_rounded"
+                    android:textSize="13sp"
+                    android:textColor="@android:color/black"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"/>
+
+                <TextView
+                    android:id="@+id/btnPrice30_50"
+                    android:layout_width="0dp"
+                    android:layout_height="37dp"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:text="30.000 - 50.000đ"
+                    android:background="@drawable/bg_tag_rounded"
+                    android:textSize="13sp"
+                    android:textColor="@android:color/black"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"/>
+
+                <TextView
+                    android:id="@+id/btnPrice50_100"
+                    android:layout_width="0dp"
+                    android:layout_height="37dp"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:text="50.000 - 100.000đ"
+                    android:background="@drawable/bg_tag_rounded"
+                    android:textSize="13sp"
+                    android:textColor="@android:color/black"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"/>
+
+                <TextView
+                    android:id="@+id/btnPrice100_plus"
+                    android:layout_width="0dp"
+                    android:layout_height="37dp"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:text="Trên 100.000đ"
+                    android:background="@drawable/bg_tag_rounded"
+                    android:textSize="13sp"
+                    android:textColor="@android:color/black"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"/>
+            </GridLayout>
+
+            <!-- ĐÁNH GIÁ -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Đánh giá"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:textColor="#fff"
+                android:background="@drawable/bg_gradient_lr"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="16dp"
+                android:useDefaultMargins="true">
+
+                <LinearLayout
+                    android:id="@+id/btnRating35"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:background="@drawable/bg_tag_rounded"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+                    <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="@android:color/holo_orange_light"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3.5 trở lên" android:textSize="13sp" android:layout_marginStart="4dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnRating40"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:background="@drawable/bg_tag_rounded"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+                    <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="@android:color/holo_orange_light"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4 trở lên" android:textSize="13sp" android:layout_marginStart="4dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnRating48"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:background="@drawable/bg_tag_rounded"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+                    <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="@android:color/holo_orange_light"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4.8 trở lên" android:textSize="13sp" android:layout_marginStart="4dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnRating50"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:background="@drawable/bg_tag_rounded"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+                    <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="@android:color/holo_orange_light"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5 sao" android:textSize="13sp" android:layout_marginStart="4dp"/>
+                </LinearLayout>
+            </GridLayout>
+
+            <!-- CHỌN NHANH -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Chọn nhanh"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:textColor="#fff"
+                android:background="@drawable/bg_gradient_lr"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="5dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_sort_recommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_like" app:tint="@color/light_blue_400" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="Đề xuất (Mặc định)" android:layout_weight="1" android:layout_marginStart="12dp" android:textColor="@android:color/black"/>
+                    <RadioButton android:id="@+id/radio_sort_recommend" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/bg_radio_circle" android:buttonTint="@null" android:clickable="false"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_sort_cheapest"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_tag" app:tint="@color/light_blue_400" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="Giá rẻ nhất" android:layout_weight="1" android:layout_marginStart="12dp" android:textColor="@android:color/black"/>
+                    <RadioButton android:id="@+id/radio_sort_cheapest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/bg_radio_circle" android:buttonTint="@null" android:clickable="false"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_sort_bestSeller"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_fire" app:tint="@color/light_blue_400" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="Bán chạy" android:layout_weight="1" android:layout_marginStart="12dp" android:textColor="@android:color/black"/>
+                    <RadioButton android:id="@+id/radio_sort_bestSeller" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/bg_radio_circle" android:buttonTint="@null" android:clickable="false"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_sort_near"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_direction" app:tint="@color/light_blue_400" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="Gần nhất" android:layout_weight="1" android:layout_marginStart="12dp" android:textColor="@android:color/black"/>
+                    <RadioButton android:id="@+id/radio_sort_near" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/bg_radio_circle" android:buttonTint="@null" android:clickable="false"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_sort_rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_star" app:tint="@color/light_blue_400" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="Đánh giá tốt" android:layout_weight="1" android:layout_marginStart="12dp" android:textColor="@android:color/black"/>
+                    <RadioButton android:id="@+id/radio_sort_rating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/bg_radio_circle" android:buttonTint="@null" android:clickable="false"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:weightSum="2"
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/btnReset"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Đặt lại"
+            android:textColor="@android:color/black"
+            android:background="@drawable/bg_category"
+            android:layout_marginEnd="8dp"
+            android:textSize="16sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"/>
+
+        <TextView
+            android:id="@+id/btnConfirm"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Xác nhận"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_btn_shadow"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtPlaceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chợ &amp; Siêu thị gần đây"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginStart="15dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressPlaces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/txtEmptyPlaces"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Không tìm thấy địa điểm gần đây"
+        android:textColor="#999"
+        android:gravity="center"
+        android:padding="24dp"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPlaces"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:nestedScrollingEnabled="true"/>
+
+</LinearLayout>

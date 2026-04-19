@@ -1,0 +1,116 @@
+<resources>
+    <!--   Dùng cho category ở Fragment-->
+    <style name="CategoryChipStyle">
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+
+        <item name="android:background">@drawable/bg_category</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+
+    <!--    Ảnh bo góc cho card-->
+    <style name="RoundedImageCard">
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+
+
+    <!--    Ảnh bo góc nhỏ-->
+    <style name="RoundedImageSmall">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <!--    Ảnh bo góc lớn-->
+    <style name="RoundedImageLarge">
+        <item name="cardCornerRadius">16dp</item>
+    </style>
+
+    <style name="Widget.Theme.StudentFood.MyView" parent="">
+        <item name="android:background">@color/gray_400</item>
+        <item name="exampleColor">@color/light_blue_400</item>
+    </style>
+
+
+    <style name="ShapeAppearance.TopRounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">12dp</item>
+        <item name="cornerSizeTopRight">12dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+
+    <style name="RatingRowStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginBottom">3dp</item>
+    </style>
+
+    <style name="RatingStarNumStyle">
+        <item name="android:layout_width">12dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">#212121</item>
+    </style>
+
+    <style name="RatingStarIconStyle">
+        <item name="android:layout_width">10dp</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:src">@drawable/ic_star</item>
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+
+    <style name="RatingProgressStyle" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">8dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:progressDrawable">@drawable/custom_progressbar</item>
+    </style>
+
+    <style name="RatingCountStyle">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:gravity">end</item>
+        <item name="android:textColor">#757575</item>
+    </style>
+
+
+
+    <style name="InputBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/bg_edit_text</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:layout_marginBottom">14dp</item>
+    </style>
+
+    <style name="IconStyle">
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_height">18dp</item>
+        <item name="android:tint">@color/light_blue_400</item>
+    </style>
+
+    <style name="TabTextSmall" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="EditTextStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#212121</item>
+        <item name="android:textColorHint">#9E9E9E</item>
+    </style>
+</resources>

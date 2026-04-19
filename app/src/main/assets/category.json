@@ -1,0 +1,272 @@
+[
+  {
+    "categoryId": "CAT_01",
+    "categoryName": "Cơm",
+    "categoryIcon": {
+      "imageValue": "ic_rice_bowl",
+      "source": "LOCAL",
+      "type": "AVATAR"
+    },
+    "categoryImage": {
+      "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg",
+      "source": "URL",
+      "type": "CATEGORY"
+    },
+    "sortOrder": 1
+  },
+  {
+    "categoryId": "CAT_02",
+    "categoryName": "Phở & Bún",
+    "categoryIcon": {
+      "imageValue": "ic_bun",
+      "source": "LOCAL",
+      "type": "AVATAR"
+    },
+    "categoryImage": {
+      "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg",
+      "source": "URL",
+      "type": "CATEGORY"
+    },
+    "sortOrder": 2
+  },
+  {
+    "categoryId": "CAT_03",
+    "categoryName": "Trà Sữa",
+    "categoryIcon": {
+      "imageValue": "ic_milk_tea",
+      "source": "LOCAL",
+      "type": "AVATAR"
+    },
+    "categoryImage": {
+      "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg",
+      "source": "URL",
+      "type": "CATEGORY"
+    },
+    "sortOrder": 3
+  },
+  {
+    "categoryId": "CAT_04",
+    "categoryName": "Cà Phê",
+    "categoryIcon": {
+      "imageValue": "ic_coffee_cup",
+      "source": "LOCAL",
+      "type": "AVATAR"
+    },
+    "categoryImage": {
+      "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg",
+      "source": "URL",
+      "type": "CATEGORY"
+    },
+    "sortOrder": 4
+  },
+  {
+    "categoryId": "CAT_05",
+    "categoryName": "Bánh Mì",
+    "categoryIcon": {
+      "imageValue": "ic_hot_dog",
+      "source": "LOCAL",
+      "type": "AVATAR"
+    },
+    "categoryImage": {
+      "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg",
+      "source": "URL",
+      "type": "CATEGORY"
+    },
+    "sortOrder": 5
+  },
+  {
+    "categoryId": "CAT_06",
+    "categoryName": "Pizza",
+    "categoryIcon": {
+      "imageValue": "ic_pizza",
+      "source": "LOCAL",
+      "type": "AVATAR"
+    },
+    "categoryImage": {
+      "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg",
+      "source": "URL",
+      "type": "CATEGORY"
+    },
+    "sortOrder": 6
+  },
+  {
+    "categoryId": "CAT_07",
+    "categoryName": "Đồ Ăn Nhanh",
+    "categoryIcon": {
+      "imageValue": "ic_fastfood",
+      "source": "LOCAL",
+      "type": "AVATAR"
+    },
+    "categoryImage": {
+      "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg",
+      "source": "URL",
+      "type": "CATEGORY"
+    },
+    "sortOrder": 7
+  },
+  {
+    "categoryId": "CAT_08",
+    "categoryName": "Ăn Vặt",
+    "categoryIcon": {
+      "imageValue": "ic_snack",
+      "source": "LOCAL",
+      "type": "AVATAR"
+    },
+    "categoryImage": {
+      "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg",
+      "source": "URL",
+      "type": "CATEGORY"
+    },
+    "sortOrder": 8
+  },
+  {
+    "categoryId": "CAT_09",
+    "categoryName": "Lẩu",
+    "categoryIcon": {
+      "imageValue": "ic_hotpot",
+      "source": "LOCAL",
+      "type": "AVATAR"
+    },
+    "categoryImage": {
+      "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg",
+      "source": "URL",
+      "type": "CATEGORY"
+    },
+    "sortOrder": 9
+  },
+  {
+    "categoryId": "CAT_10",
+    "categoryName": "Sushi",
+    "categoryIcon": {
+      "imageValue": "ic_sushi",
+      "source": "LOCAL",
+      "type": "AVATAR"
+    },
+    "categoryImage": {
+      "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg",
+      "source": "URL",
+      "type": "CATEGORY"
+    },
+    "sortOrder": 10
+  },
+  {
+    "categoryId": "CAT_11",
+    "categoryName": "Đồ Ngọt",
+    "categoryIcon": {
+      "imageValue": "ic_sweet",
+      "source": "LOCAL",
+      "type": "AVATAR"
+    },
+    "categoryImage": {
+      "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg",
+      "source": "URL",
+      "type": "CATEGORY"
+    },
+    "sortOrder": 11
+  },
+  {
+    "categoryId": "CAT_12",
+    "categoryName": "Trái cây",
+    "categoryIcon": {
+      "imageValue": "ic_fruit",
+      "source": "LOCAL",
+      "type": "AVATAR"
+    },
+    "categoryImage": {
+      "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg",
+      "source": "URL",
+      "type": "CATEGORY"
+    },
+    "sortOrder": 12
+  },
+  {
+    "categoryId": "CAT_13",
+    "categoryName": "Xôi",
+    "categoryIcon": {
+      "imageValue": "ic_rice_bowl",
+      "source": "LOCAL",
+      "type": "AVATAR"
+    },
+    "categoryImage": {
+      "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg",
+      "source": "URL",
+      "type": "CATEGORY"
+    },
+    "sortOrder": 13
+  },
+  {
+    "categoryId": "CAT_14",
+    "categoryName": "Pasta",
+    "categoryIcon": {
+      "imageValue": "ic_noodle",
+      "source": "LOCAL",
+      "type": "AVATAR"
+    },
+    "categoryImage": {
+      "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg",
+      "source": "URL",
+      "type": "CATEGORY"
+    },
+    "sortOrder": 14
+  },
+  {
+    "categoryId": "CAT_15",
+    "categoryName": "Đồ Nướng",
+    "categoryIcon": {
+      "imageValue": "ic_grill",
+      "source": "LOCAL",
+      "type": "AVATAR"
+    },
+    "categoryImage": {
+      "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg",
+      "source": "URL",
+      "type": "CATEGORY"
+    },
+    "sortOrder": 15
+  },
+  {
+    "categoryId": "CAT_16",
+    "categoryName": "Kem & Sữa Chua",
+    "categoryIcon": {
+      "imageValue": "ic_ice_cream",
+      "source": "LOCAL",
+      "type": "AVATAR"
+    },
+    "categoryImage": {
+      "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg",
+      "source": "URL",
+      "type": "CATEGORY"
+    },
+    "sortOrder": 16
+  },
+  {
+    "categoryId": "CAT_17",
+    "categoryName": "Gà Rán",
+    "categoryIcon": {
+      "imageValue": "ic_fried_chicken",
+      "source": "LOCAL",
+      "type": "AVATAR"
+    },
+    "categoryImage": {
+      "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg",
+      "source": "URL",
+      "type": "CATEGORY"
+    },
+    "sortOrder": 17
+  },
+  {
+    "categoryId": "CAT_18",
+    "categoryName": "Combo Giảm Giá",
+    "categoryIcon": {
+      "imageValue": "ic_price_tag",
+      "source": "LOCAL",
+      "type": "AVATAR"
+    },
+    "categoryImage": {
+      "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg",
+      "source": "URL",
+      "type": "CATEGORY"
+    },
+    "sortOrder": 18
+  }
+]

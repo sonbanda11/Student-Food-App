@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 🔥 MAIN THEME -->
+    <style name="Theme.StudentFood" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Màu chính -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Màu phụ -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Status bar -->
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+
+    </style>
+
+    <!-- 🔥 NO ACTION BAR -->
+    <style name="Theme.StudentFood.NoActionBar" parent="Theme.StudentFood">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- 🔥 POPUP -->
+    <style name="Theme.StudentFood.PopupOverlay" parent="ThemeOverlay.Material3.Light" />
+
+    <!-- 🔥 BOTTOM NAV compact -->
+    <style name="Widget.MaterialComponents.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:minHeight">52dp</item>
+    </style>
+
+    <!-- 🔥 SPLASH -->
+    <style name="Theme.StudentFood.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo_app</item>
+        <item name="windowSplashScreenIconBackgroundColor">@color/white</item>
+        <item name="postSplashScreenTheme">@style/Theme.StudentFood</item>
+    </style>
+
+</resources>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <!-- IMAGE -->
+        <FrameLayout
+            android:id="@+id/iconContainer"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:background="@null"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/imgRestaurant"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"/>
+        </FrameLayout>
+
+        <!-- INFO -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="10dp">
+
+            <!-- NAME -->
+            <TextView
+                android:id="@+id/txtRestaurantName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bún bò sinh viên"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <!-- DESCRIPTION -->
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Món ăn ngon, phục vụ nhanh"
+                android:textSize="12sp"
+                android:textColor="#888"
+                android:layout_marginTop="2dp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <!-- RATING + DISTANCE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- LEFT (Rating) -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ic_star"
+                        app:tint="@color/yellow"/>
+
+                    <TextView
+                        android:id="@+id/txtRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.5"
+                        android:textSize="12sp"
+                        android:layout_marginStart="2dp"
+                        android:textColor="#666"/>
+
+                    <TextView
+                        android:id="@+id/txtTotalReviews"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(150+)"
+                        android:textSize="11sp"
+                        android:layout_marginStart="2dp"
+                        android:textColor="#888"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+                </LinearLayout>
+
+                <!-- RIGHT (Distance) -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ic_location"/>
+
+                    <TextView
+                        android:id="@+id/txtDistance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.8 km"
+                        android:textSize="12sp"
+                        android:layout_marginStart="2dp"
+                        android:textColor="#666"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- PRICE -->
+            <TextView
+                android:id="@+id/txtPriceRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25.000đ - 40.000đ"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/red"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

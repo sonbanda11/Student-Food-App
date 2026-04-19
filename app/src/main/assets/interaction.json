@@ -1,0 +1,36 @@
+[
+  { "refId": "RES_01", "refType": "RESTAURANT", "likeCount": 150, "favoriteCount": 45, "viewCount": 1200, "shareCount": 30 },
+  { "refId": "RES_02", "refType": "RESTAURANT", "likeCount": 85, "favoriteCount": 20, "viewCount": 850, "shareCount": 12 },
+  { "refId": "RES_03", "refType": "RESTAURANT", "likeCount": 210, "favoriteCount": 60, "viewCount": 2500, "shareCount": 45 },
+  { "refId": "RES_04", "refType": "RESTAURANT", "likeCount": 45, "favoriteCount": 10, "viewCount": 400, "shareCount": 5 },
+  { "refId": "RES_05", "refType": "RESTAURANT", "likeCount": 120, "favoriteCount": 35, "viewCount": 1100, "shareCount": 18 },
+
+  { "refId": "FOOD_01", "refType": "FOOD", "likeCount": 45, "favoriteCount": 12, "viewCount": 300, "shareCount": 8 },
+  { "refId": "FOOD_02", "refType": "FOOD", "likeCount": 38, "favoriteCount": 9, "viewCount": 250, "shareCount": 5 },
+  { "refId": "FOOD_03", "refType": "FOOD", "likeCount": 70, "favoriteCount": 25, "viewCount": 600, "shareCount": 15 },
+  { "refId": "FOOD_04", "refType": "FOOD", "likeCount": 22, "favoriteCount": 5, "viewCount": 180, "shareCount": 2 },
+  { "refId": "FOOD_05", "refType": "FOOD", "likeCount": 55, "favoriteCount": 18, "viewCount": 450, "shareCount": 10 },
+
+  { "refId": "POST_01", "refType": "POST", "likeCount": 120, "favoriteCount": 15, "viewCount": 500, "shareCount": 5 },
+  { "refId": "POST_02", "refType": "POST", "likeCount": 85, "favoriteCount": 10, "viewCount": 350, "shareCount": 2 },
+  { "refId": "POST_03", "refType": "POST", "likeCount": 45, "favoriteCount": 5, "viewCount": 200, "shareCount": 1 },
+  { "refId": "POST_04", "refType": "POST", "likeCount": 210, "favoriteCount": 30, "viewCount": 800, "shareCount": 8 },
+  { "refId": "POST_05", "refType": "POST", "likeCount": 156, "favoriteCount": 25, "viewCount": 650, "shareCount": 15 },
+  { "refId": "POST_06", "refType": "POST", "likeCount": 320, "favoriteCount": 50, "viewCount": 1200, "shareCount": 10 },
+
+  { "refId": "REV_01", "refType": "REVIEW", "likeCount": 12, "favoriteCount": 2, "viewCount": 150, "shareCount": 1 },
+  { "refId": "REV_02", "refType": "REVIEW", "likeCount": 8, "favoriteCount": 1, "viewCount": 100, "shareCount": 0 },
+  { "refId": "REV_03", "refType": "REVIEW", "likeCount": 20, "favoriteCount": 5, "viewCount": 250, "shareCount": 3 },
+  { "refId": "REV_04", "refType": "REVIEW", "likeCount": 3, "favoriteCount": 0, "viewCount": 80, "shareCount": 0 },
+  { "refId": "REV_05", "refType": "REVIEW", "likeCount": 7, "favoriteCount": 1, "viewCount": 120, "shareCount": 1 },
+
+  { "refId": "CMT_01", "refType": "COMMENT", "likeCount": 5, "favoriteCount": 0, "viewCount": 20, "shareCount": 0 },
+  { "refId": "CMT_02", "refType": "COMMENT", "likeCount": 2, "favoriteCount": 0, "viewCount": 15, "shareCount": 0 },
+  { "refId": "CMT_03", "refType": "COMMENT", "likeCount": 8, "favoriteCount": 1, "viewCount": 30, "shareCount": 0 },
+  { "refId": "CMT_04", "refType": "COMMENT", "likeCount": 3, "favoriteCount": 0, "viewCount": 12, "shareCount": 0 },
+  { "refId": "CMT_05", "refType": "COMMENT", "likeCount": 4, "favoriteCount": 0, "viewCount": 18, "shareCount": 0 },
+  { "refId": "CMT_06", "refType": "COMMENT", "likeCount": 12, "favoriteCount": 2, "viewCount": 45, "shareCount": 0 },
+  { "refId": "CMT_07", "refType": "COMMENT", "likeCount": 5, "favoriteCount": 0, "viewCount": 25, "shareCount": 0 },
+  { "refId": "CMT_08", "refType": "COMMENT", "likeCount": 15, "favoriteCount": 3, "viewCount": 60, "shareCount": 0 },
+  { "refId": "CMT_09", "refType": "COMMENT", "likeCount": 7, "favoriteCount": 1, "viewCount": 35, "shareCount": 0 }
+]

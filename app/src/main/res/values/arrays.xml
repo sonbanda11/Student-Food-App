@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="role_entries">
+        <item>STUDENT</item>
+        <item>OWNER</item>
+        <item>ADMIN</item>
+    </string-array>
+
+</resources>

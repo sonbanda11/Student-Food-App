@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/imgFood"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample_food" />
+
+        <TextView
+            android:id="@+id/txtFoodName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Tên món ăn"
+            android:textColor="#333"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginHorizontal="8dp">
+
+            <TextView
+                android:id="@+id/txtFoodPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25.000đ"
+                android:textColor="#FF5722"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/ic_star" />
+
+                <TextView
+                    android:id="@+id/txtFoodRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="4.8"
+                    android:textColor="#777"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

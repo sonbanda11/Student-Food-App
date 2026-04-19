@@ -1,0 +1,32 @@
+[
+  {
+    "searchId": "SEA_01",
+    "userId": "STU_01",
+    "queryText": "Cơm tấm sườn",
+    "timestamp": 1712415600000
+  },
+  {
+    "searchId": "SEA_02",
+    "userId": "STU_01",
+    "queryText": "Trà sữa thái xanh",
+    "timestamp": 1712416200000
+  },
+  {
+    "searchId": "SEA_03",
+    "userId": "STU_01",
+    "queryText": "Bún đậu mắm tôm",
+    "timestamp": 1712416800000
+  },
+  {
+    "searchId": "SEA_04",
+    "userId": "STU_01",
+    "queryText": "Mì cay 7 cấp độ",
+    "timestamp": 1712417400000
+  },
+  {
+    "searchId": "SEA_05",
+    "userId": "STU_02",
+    "queryText": "Phở bò",
+    "timestamp": 1712418000000
+  }
+]

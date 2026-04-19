@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_tag_rounded"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="6dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@drawable/ic_time"
+        app:tint="@color/light_blue_600"/>
+
+    <TextView
+        android:id="@+id/tvHistoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="4dp"
+        android:text="Từ khóa"
+        android:textColor="@color/gray_800"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/btnDelete"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="4dp"
+        android:padding="2dp"
+        android:src="@drawable/ic_close"
+        android:alpha="0.4"
+        app:tint="@color/black"
+        android:background="?attr/selectableItemBackgroundBorderless" />
+
+</LinearLayout>

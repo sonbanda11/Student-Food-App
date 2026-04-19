@@ -1,0 +1,119 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Map -->
+    <FrameLayout
+        android:id="@+id/mapContainer"
+        android:layout_width="match_parent"
+        android:layout_height="620dp">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/viewMapOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@drawable/bg_toolbar_gradient"
+        android:alpha="0"
+        android:visibility="visible"/>
+
+    <!-- Search Box -->
+    <LinearLayout
+        android:id="@+id/layoutSearchBox"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_gradient_border"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_search"/>
+
+        <TextView
+            android:id="@+id/txtSearchAddress"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="Tìm kiếm gần đây"/>
+    </LinearLayout>
+
+    <!-- NÚT VỊ TRÍ HIỆN TẠI -->
+    <ImageView
+        android:id="@+id/btnMyLocation"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="end|bottom"
+        android:background="@drawable/bg_gradient_border_circle"
+        android:elevation="6dp"
+        android:padding="12dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_my_location"
+        app:tint="#00DFFF" />
+
+    <!-- Bottom Sheet -->
+    <FrameLayout
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_home_card"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Thanh kéo -->
+            <View
+                android:layout_width="30dp"
+                android:layout_height="5dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_btn_shadow"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Tab selector -->
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabNearby"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="4dp"
+                app:tabMode="scrollable"
+                app:tabGravity="start"
+                android:background="@color/white"
+                app:tabSelectedTextColor="#00DFFF"
+                app:tabTextColor="#757575"
+                app:tabIndicatorColor="#00DFFF"
+                app:tabTextAppearance="@style/TabTextSmall"/>
+
+            <!-- Pager content -->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/pagerNearby"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

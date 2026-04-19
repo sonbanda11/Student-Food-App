@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">api.openweathermap.org</domain>
+        <domain includeSubdomains="true">overpass-api.de</domain>
+        <domain includeSubdomains="true">overpass.openstreetmap.fr</domain>
+        <domain includeSubdomains="true">router.project-osrm.org</domain>
+        <domain includeSubdomains="true">routing.openstreetmap.de</domain>
+        <domain includeSubdomains="true">staticmap.openstreetmap.de</domain>
+    </domain-config>
+    
+    <!-- Allow cleartext traffic for debugging -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system"/>
+        </trust-anchors>
+    </base-config>
+</network-security-config>

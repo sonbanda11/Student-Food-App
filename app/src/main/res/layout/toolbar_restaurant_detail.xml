@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="32dp">
+
+    <!-- Thanh trên -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <!-- nút back -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back"/>
+
+        <!-- title -->
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+
+        <!-- nhóm icon bên phải -->
+        <LinearLayout
+            android:id="@+id/layoutActions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp">
+
+            <!-- GỌI -->
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/ic_call"
+                app:tint="#4CAF50"/>
+
+            <!-- CHỈ ĐƯỜNG -->
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/ic_direction"
+                app:tint="#2196F3"/>
+
+            <!-- LƯU -->
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/ic_favorite"
+                app:tint="#E91E63"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

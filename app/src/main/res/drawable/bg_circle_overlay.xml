@@ -1,0 +1,6 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#1F000000"/>
+    <!-- 66 = độ trong suốt -->
+
+    <corners android:radius="20dp"/>
+</shape>

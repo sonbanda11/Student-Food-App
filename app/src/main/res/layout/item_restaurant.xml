@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Restaurant Image -->
+        <ImageView
+            android:id="@+id/imgRestaurant"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_rounded_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:src="@drawable/ic_restaurant_placeholder" />
+
+        <!-- Restaurant Name -->
+        <TextView
+            android:id="@+id/txtRestaurantName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Restaurant Name"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@id/imgRestaurant"
+            app:layout_constraintEnd_toStartOf="@id/txtDistance"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Quán Ngon Hà Nội" />
+
+        <!-- Distance -->
+        <TextView
+            android:id="@+id/txtRestaurantDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.2 km"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="1.2 km" />
+
+        <!-- Address -->
+        <TextView
+            android:id="@+id/txtRestaurantAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Restaurant Address"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintStart_toStartOf="@id/txtRestaurantName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtRestaurantName"
+            tools:text="123 Đường Láng, Đống Đa, Hà Nội" />
+
+        <!-- Rating Bar -->
+        <RatingBar
+            android:id="@+id/ratingBarRestaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            style="?android:attr/ratingBarStyleSmall"
+            android:numStars="5"
+            android:stepSize="0.1"
+            android:rating="4.5"
+            app:layout_constraintStart_toStartOf="@id/txtRestaurantName"
+            app:layout_constraintTop_toBottomOf="@id/txtRestaurantAddress" />
+
+        <!-- Rating Text -->
+        <TextView
+            android:id="@+id/txtRestaurantRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="4.5"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/ratingBarRestaurant"
+            app:layout_constraintTop_toTopOf="@id/ratingBarRestaurant"
+            app:layout_constraintBottom_toBottomOf="@id/ratingBarRestaurant"
+            tools:text="4.5" />
+
+        <!-- Reviews Count -->
+        <TextView
+            android:id="@+id/txtRestaurantReviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="150 đánh giá"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toEndOf="@id/txtRestaurantRating"
+            app:layout_constraintTop_toTopOf="@id/ratingBarRestaurant"
+            app:layout_constraintBottom_toBottomOf="@id/ratingBarRestaurant"
+            tools:text="150 đánh giá" />
+
+        <!-- Price Range -->
+        <TextView
+            android:id="@+id/txtRestaurantPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="50,000 - 100,000 VNĐ"
+            android:textSize="12sp"
+            android:textColor="@android:color/holo_green_dark"
+            android:background="@drawable/bg_price_tag"
+            android:padding="4dp"
+            app:layout_constraintStart_toStartOf="@id/txtRestaurantName"
+            app:layout_constraintTop_toBottomOf="@id/ratingBarRestaurant"
+            tools:text="50,000 - 100,000 VNĐ" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

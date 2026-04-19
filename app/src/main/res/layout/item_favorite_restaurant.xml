@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <!-- Restaurant Image -->
+        <ImageView
+            android:id="@+id/imgRestaurant"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="12dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_circle" />
+
+        <!-- Restaurant Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Restaurant Name"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/txtCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:id="@+id/txtAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <!-- Rating -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical">
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="60dp"
+                    android:layout_height="12dp"
+                    android:rating="4.5"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:progressTint="#FFC107"
+                    android:secondaryProgressTint="#E0E0E0" />
+
+                <TextView
+                    android:id="@+id/txtRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.5"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgFavorite"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_favorite_done"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="4dp"
+                android:layout_marginBottom="8dp" />
+
+            <ImageView
+                android:id="@+id/imgShare"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_share"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="4dp"
+                android:layout_marginBottom="8dp" />
+
+            <ImageView
+                android:id="@+id/imgRemove"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@android:drawable/ic_menu_delete"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="4dp"
+                android:tint="#F44336" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

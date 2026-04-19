@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <!-- IMAGE -->
+        <ImageView
+            android:id="@+id/imgFood"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:clipToOutline="true"
+            android:background="@drawable/bg_rounded_image"
+            tools:src="@drawable/sample_food" />
+
+        <!-- INFO -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- NAME -->
+            <TextView
+                android:id="@+id/txtFoodName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="Bún đậu mẹt siêu ngon giá sinh viên" />
+
+            <!-- RESTAURANT -->
+            <TextView
+                android:id="@+id/txtRestaurant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="#757575"
+                android:textSize="13sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="Quán A" />
+
+            <!-- RATING + DISTANCE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- LEFT -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ic_star"
+                        app:tint="#FFC107"/>
+
+                    <TextView
+                        android:id="@+id/txtRatingSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:textColor="#666"
+                        android:textSize="12sp"
+                        tools:text="4.8" />
+                </LinearLayout>
+
+                <!-- RIGHT -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ic_location"/>
+
+                    <TextView
+                        android:id="@+id/txtDistance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:textColor="@color/light_blue_600"
+                        android:textSize="12sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        tools:text="1.2 km" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- PRICE -->
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/red"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="35.000đ" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

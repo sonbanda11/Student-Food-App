@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal"
+    android:background="@android:color/white"
+    android:weightSum="3">
+
+    <LinearLayout
+        android:id="@+id/tabAll"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/txtAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tất cả"
+            android:textSize="14sp"
+            android:textColor="@color/light_blue_400"/>
+        <View
+            android:id="@+id/lineAll"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/light_blue_400"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tabTop"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/txtTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nhiều tương tác"
+            android:textSize="14sp"
+            android:textColor="#757575"/>
+        <View
+            android:id="@+id/lineTop"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/light_blue_400"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tabImage"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/txtImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Có hình ảnh"
+            android:textSize="14sp"
+            android:textColor="#757575"/>
+        <View
+            android:id="@+id/lineImage"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/light_blue_400"
+            android:visibility="invisible"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,106 @@
+[
+  {
+    "itemId": "SUP_ITEM_01",
+    "categoryName": "Thực phẩm",
+    "name": "Mì gói Hảo Hảo",
+    "description": "Mì tôm chua cay, gói 75g",
+    "price": 5000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  },
+  {
+    "itemId": "SUP_ITEM_02",
+    "categoryName": "Thực phẩm",
+    "name": "Gạo ST25",
+    "description": "Gạo thơm ngon, túi 5kg",
+    "price": 120000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  },
+  {
+    "itemId": "SUP_ITEM_03",
+    "categoryName": "Thực phẩm",
+    "name": "Trứng gà ta",
+    "description": "Trứng gà ta sạch, vỉ 10 quả",
+    "price": 35000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  },
+  {
+    "itemId": "SUP_ITEM_04",
+    "categoryName": "Đồ uống",
+    "name": "Nước suối Lavie",
+    "description": "Chai 500ml",
+    "price": 8000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  },
+  {
+    "itemId": "SUP_ITEM_05",
+    "categoryName": "Đồ uống",
+    "name": "Coca Cola",
+    "description": "Lon 330ml lạnh",
+    "price": 12000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  },
+  {
+    "itemId": "SUP_ITEM_06",
+    "categoryName": "Đồ uống",
+    "name": "Trà xanh 0 độ",
+    "description": "Chai 450ml",
+    "price": 10000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  },
+  {
+    "itemId": "SUP_ITEM_07",
+    "categoryName": "Đồ uống",
+    "name": "Sữa tươi Vinamilk",
+    "description": "Hộp 180ml",
+    "price": 8000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  },
+  {
+    "itemId": "SUP_ITEM_08",
+    "categoryName": "Bánh kẹo",
+    "name": "Bánh Oreo",
+    "description": "Bánh quy kem, gói 137g",
+    "price": 25000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  },
+  {
+    "itemId": "SUP_ITEM_09",
+    "categoryName": "Bánh kẹo",
+    "name": "Kẹo dẻo Haribo",
+    "description": "Kẹo dẻo hoa quả, gói 100g",
+    "price": 35000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  },
+  {
+    "itemId": "SUP_ITEM_10",
+    "categoryName": "Gia dụng",
+    "name": "Nước rửa chén Sunlight",
+    "description": "Chai 500ml, hương chanh",
+    "price": 22000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  },
+  {
+    "itemId": "SUP_ITEM_11",
+    "categoryName": "Gia dụng",
+    "name": "Xà phòng Lifebuoy",
+    "description": "Bánh 90g, kháng khuẩn",
+    "price": 15000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  },
+  {
+    "itemId": "SUP_ITEM_12",
+    "categoryName": "Rau củ",
+    "name": "Cà chua",
+    "description": "Cà chua tươi, túi 500g",
+    "price": 18000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  },
+  {
+    "itemId": "SUP_ITEM_13",
+    "categoryName": "Rau củ",
+    "name": "Khoai tây",
+    "description": "Khoai tây sạch, túi 1kg",
+    "price": 25000,
+    "imageUrl": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-31.jpg"
+  }
+]

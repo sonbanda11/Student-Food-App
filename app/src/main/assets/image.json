@@ -1,0 +1,386 @@
+[
+  {
+    "imageId": "IMG_01",
+    "refId": "RES_01",
+    "refType": "RESTAURANT",
+    "imageValue": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c",
+    "type": "AVATAR",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_02",
+    "refId": "RES_01",
+    "refType": "RESTAURANT",
+    "imageValue": "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
+    "type": "BANNER",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_03",
+    "refId": "STU_01",
+    "refType": "USER",
+    "imageValue": "https://lh3.googleusercontent.com/a/default-user",
+    "type": "AVATAR",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_04",
+    "refId": "CAT_01",
+    "refType": "CATEGORY",
+    "imageValue": "ic_category_rice",
+    "type": "DESCRIPTION",
+    "source": "LOCAL"
+  },
+  {
+    "imageId": "IMG_05",
+    "refId": "FOOD_01",
+    "refType": "FOOD",
+    "imageValue": "https://images.unsplash.com/photo-1567033161397-06ad3f93e29a",
+    "type": "DESCRIPTION",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_06",
+    "refId": "RES_02",
+    "refType": "RESTAURANT",
+    "imageValue": "https://images.unsplash.com/photo-1559925393-8be0ec41b50d",
+    "type": "FOOD_MENU",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_07",
+    "refId": "REV_01",
+    "refType": "REVIEW",
+    "imageValue": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38",
+    "type": "DESCRIPTION",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_08",
+    "refId": "POST_01",
+    "refType": "POST",
+    "imageValue": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0",
+    "type": "BANNER",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_09",
+    "refId": "CAT_02",
+    "refType": "CATEGORY",
+    "imageValue": "ic_category_milktea",
+    "type": "DESCRIPTION",
+    "source": "LOCAL"
+  },
+  {
+    "imageId": "IMG_10",
+    "refId": "FOOD_02",
+    "refType": "FOOD",
+    "imageValue": "https://images.unsplash.com/photo-1513104890138-7c749659a591",
+    "type": "FOOD_MENU",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_11",
+    "refId": "REV_01",
+    "refType": "REVIEW",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "DESCRIPTION",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_12",
+    "refId": "COT_01",
+    "refType": "COMMENT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "DESCRIPTION",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_13",
+    "refId": "COM_06",
+    "refType": "COMMENT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-2.jpg",
+    "type": "DESCRIPTION",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_14",
+    "refId": "POST_02",
+    "refType": "POST",
+    "imageValue": "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
+    "type": "DESCRIPTION",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_15",
+    "refId": "RES_01",
+    "refType": "RESTAURANT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "AVATAR",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_16",
+    "refId": "RES_01",
+    "refType": "RESTAURANT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "BANNER",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_17",
+    "refId": "RES_02",
+    "refType": "RESTAURANT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "AVATAR",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_18",
+    "refId": "RES_02",
+    "refType": "RESTAURANT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "BANNER",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_19",
+    "refId": "RES_03",
+    "refType": "RESTAURANT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "AVATAR",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_20",
+    "refId": "RES_03",
+    "refType": "RESTAURANT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "BANNER",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_21",
+    "refId": "RES_04",
+    "refType": "RESTAURANT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "AVATAR",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_22",
+    "refId": "RES_04",
+    "refType": "RESTAURANT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "BANNER",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_23",
+    "refId": "RES_05",
+    "refType": "RESTAURANT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "AVATAR",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_24",
+    "refId": "RES_05",
+    "refType": "RESTAURANT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "BANNER",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_25",
+    "refId": "RES_06",
+    "refType": "RESTAURANT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "AVATAR",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_26",
+    "refId": "RES_06",
+    "refType": "RESTAURANT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "BANNER",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_27",
+    "refId": "RES_07",
+    "refType": "RESTAURANT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "AVATAR",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_28",
+    "refId": "RES_07",
+    "refType": "RESTAURANT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "BANNER",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_29",
+    "refId": "RES_08",
+    "refType": "RESTAURANT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "AVATAR",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_30",
+    "refId": "RES_08",
+    "refType": "RESTAURANT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "BANNER",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_31",
+    "refId": "RES_09",
+    "refType": "RESTAURANT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "AVATAR",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_32",
+    "refId": "RES_09",
+    "refType": "RESTAURANT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "BANNER",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_33",
+    "refId": "RES_10",
+    "refType": "RESTAURANT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "AVATAR",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_34",
+    "refId": "RES_10",
+    "refType": "RESTAURANT",
+    "imageValue": "https://cdn-media.sforum.vn/storage/app/media/ctvseo_maihue/hinh-nen-do-an-cute/hinh-nen-do-an-cute-1.jpg",
+    "type": "BANNER",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_P03_1",
+    "refId": "POST_03",
+    "refType": "POST",
+    "imageValue": "https://images.unsplash.com/photo-1540189567004-451aa352936f",
+    "type": "DESCRIPTION",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_P03_2",
+    "refId": "POST_03",
+    "refType": "POST",
+    "imageValue": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd",
+    "type": "DESCRIPTION",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_P04_1",
+    "refId": "POST_04",
+    "refType": "POST",
+    "imageValue": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38",
+    "type": "DESCRIPTION",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_P04_2",
+    "refId": "POST_04",
+    "refType": "POST",
+    "imageValue": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543",
+    "type": "DESCRIPTION",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_P04_3",
+    "refId": "POST_04",
+    "refType": "POST",
+    "imageValue": "https://images.unsplash.com/photo-1467003909585-2f8a72700288",
+    "type": "DESCRIPTION",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_P05_1",
+    "refId": "POST_05",
+    "refType": "POST",
+    "imageValue": "https://images.unsplash.com/photo-1554118811-1e0d58224f24",
+    "type": "DESCRIPTION",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_P05_2",
+    "refId": "POST_05",
+    "refType": "POST",
+    "imageValue": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085",
+    "type": "DESCRIPTION",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_P05_3",
+    "refId": "POST_05",
+    "refType": "POST",
+    "imageValue": "https://images.unsplash.com/photo-1559925393-8be0ec41b50d",
+    "type": "DESCRIPTION",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_P05_4",
+    "refId": "POST_05",
+    "refType": "POST",
+    "imageValue": "https://images.unsplash.com/photo-1509042239860-f550ce710b93",
+    "type": "DESCRIPTION",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_P06_1",
+    "refId": "POST_06",
+    "refType": "POST",
+    "imageValue": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c",
+    "type": "DESCRIPTION",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_P06_2",
+    "refId": "POST_06",
+    "refType": "POST",
+    "imageValue": "https://images.unsplash.com/photo-1583623025817-d180a2221d0a",
+    "type": "DESCRIPTION",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_P06_3",
+    "refId": "POST_06",
+    "refType": "POST",
+    "imageValue": "https://images.unsplash.com/photo-1553621042-f6e147245754",
+    "type": "DESCRIPTION",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_P06_4",
+    "refId": "POST_06",
+    "refType": "POST",
+    "imageValue": "https://images.unsplash.com/photo-1563612116625-3012372fccce",
+    "type": "DESCRIPTION",
+    "source": "URL"
+  },
+  {
+    "imageId": "IMG_P06_5",
+    "refId": "POST_06",
+    "refType": "POST",
+    "imageValue": "https://images.unsplash.com/photo-1534083222118-f291073f4158",
+    "type": "DESCRIPTION",
+    "source": "URL"
+  }
+]

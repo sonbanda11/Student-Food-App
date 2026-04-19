@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0F2F5">
+
+        <LinearLayout
+            android:id="@+id/layoutLoggedIn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <!-- HEADER -->
+            <LinearLayout
+                android:id="@+id/communityHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:elevation="4dp">
+
+                <!-- Title row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="44dp"
+                    android:paddingBottom="6dp"
+                    android:paddingHorizontal="16dp">
+
+                    <ImageView
+                        android:id="@+id/btnMenu"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/ic_menu"
+                        android:padding="8dp"
+                        android:layout_marginEnd="10dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Food Community"
+                        android:textColor="@color/light_blue_600"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <ImageView
+                        android:id="@+id/btnSearch"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_search"
+                        android:padding="8dp"
+                        android:layout_marginEnd="8dp"/>
+
+                    <ImageView
+                        android:id="@+id/btnNotification"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_notification"/>
+
+                </LinearLayout>
+
+                <!-- Search bar (ẩn mặc định) -->
+                <LinearLayout
+                    android:id="@+id/layoutSearchBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="12dp"
+                    android:paddingBottom="6dp"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/edtSearch"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:hint="Tìm kiếm bài viết, video..."
+                        android:textColorHint="#AAAAAA"
+                        android:background="@drawable/bg_search"
+                        android:paddingHorizontal="12dp"
+                        android:textSize="14sp"
+                        android:importantForAutofill="no"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"/>
+
+                    <ImageView
+                        android:id="@+id/btnCloseSearch"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/ic_close"
+                        android:padding="8dp"
+                        android:layout_marginStart="6dp"/>
+                </LinearLayout>
+
+                <!-- TabLayout -->
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    app:tabMode="fixed"
+                    app:tabGravity="fill"
+                    app:tabSelectedTextColor="@color/light_blue_600"
+                    app:tabTextColor="#888"
+                    app:tabIndicatorColor="@color/light_blue_600"
+                    app:tabIndicatorHeight="3dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0"/>
+            </LinearLayout>
+
+            <!-- ViewPager chiếm phần còn lại -->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutGuest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="40dp"
+            android:background="@android:color/white"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_person"
+                app:civ_border_color="#EEEEEE"
+                app:civ_border_width="1dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tham gia cộng đồng"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đăng nhập để chia sẻ trải nghiệm ăn uống và kết nối với các bạn sinh viên khác."
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                android:textSize="16sp"
+                android:textColor="#757575"/>
+
+            <TextView
+                android:id="@+id/btnGoToLogin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:text="Đăng nhập ngay"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/bg_shadow_blue_radius"/>
+
+        </LinearLayout>
+
+        <!-- FAB scroll-to-top -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabScrollTop"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/ic_arrow_down"
+            android:rotation="180"
+            android:scaleType="center"
+            app:fabCustomSize="40dp"
+            app:maxImageSize="20dp"
+            app:backgroundTint="@color/light_blue_600"
+            app:tint="@android:color/white"
+            app:elevation="4dp"
+            app:pressedTranslationZ="6dp"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white"
+        app:headerLayout="@layout/nav_drawer_header"
+        app:menu="@menu/community_drawer_menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

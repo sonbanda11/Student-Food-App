@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="0dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="1dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER: Avatar + Name + Time + More -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/ic_person"
+                android:background="@drawable/bg_circle"
+                android:scaleType="centerCrop"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp">
+
+                <TextView
+                    android:id="@+id/txtUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nguyễn Viết Sơn"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#1A1A1A"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="2dp">
+
+                    <TextView
+                        android:id="@+id/txtTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 phút trước"
+                        android:textSize="12sp"
+                        android:textColor="#888"/>
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="3dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/bg_dot"/>
+
+                    <ImageView
+                        android:id="@+id/imgLocation"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_location"/>
+
+                    <TextView
+                        android:id="@+id/txtLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hà Nội"
+                        android:textSize="12sp"
+                        android:textColor="#888"
+                        android:layout_marginStart="2dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- CONTENT -->
+        <TextView
+            android:id="@+id/txtContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="12dp"
+            android:paddingBottom="8dp"
+            android:text="Nội dung bài đăng..."
+            android:textSize="14sp"
+            android:textColor="#222"
+            android:lineSpacingMultiplier="1.3"
+            android:maxLines="4"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/txtSeeMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="12dp"
+            android:paddingBottom="6dp"
+            android:text="Xem thêm"
+            android:textColor="#1877F2"
+            android:textSize="13sp"
+            android:visibility="gone"/>
+
+        <!-- IMAGES: dynamic layout (1 ảnh full, 2 ảnh chia đôi, 3+ grid) -->
+        <LinearLayout
+            android:id="@+id/layoutImages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerImages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <!-- DIVIDER -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#F0F0F0"/>
+
+        <!-- STATS ROW: X lượt thích · X bình luận -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp">
+
+            <TextView
+                android:id="@+id/txtLikeCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="120 lượt thích"
+                android:textSize="12sp"
+                android:textColor="#888"/>
+
+            <TextView
+                android:id="@+id/txtCommentCountStats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15 bình luận"
+                android:textSize="12sp"
+                android:textColor="#888"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" · "
+                android:textSize="12sp"
+                android:textColor="#888"/>
+
+            <TextView
+                android:id="@+id/txtShareCountStats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 chia sẻ"
+                android:textSize="12sp"
+                android:textColor="#888"/>
+        </LinearLayout>
+
+        <!-- DIVIDER -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F0F0F0"/>
+
+        <!-- ACTION BUTTONS: Like | Comment | Share -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <!-- Like -->
+            <LinearLayout
+                android:id="@+id/btnLike"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/imgLike"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_like"
+                    app:tint="#65676B"/>
+
+                <TextView
+                    android:id="@+id/txtLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thích"
+                    android:textSize="13sp"
+                    android:textColor="#65676B"
+                    android:layout_marginStart="5dp"/>
+            </LinearLayout>
+
+            <!-- Comment -->
+            <LinearLayout
+                android:id="@+id/btnComment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/imgComment"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_comment"
+                    app:tint="#65676B"/>
+
+                <TextView
+                    android:id="@+id/txtCommentCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bình luận"
+                    android:textSize="13sp"
+                    android:textColor="#65676B"
+                    android:layout_marginStart="5dp"/>
+            </LinearLayout>
+
+            <!-- Share -->
+            <LinearLayout
+                android:id="@+id/btnShare"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_share"
+                    app:tint="#65676B"/>
+
+                <TextView
+                    android:id="@+id/txtShareCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chia sẻ"
+                    android:textSize="13sp"
+                    android:textColor="#65676B"
+                    android:layout_marginStart="5dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

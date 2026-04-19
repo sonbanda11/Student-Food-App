@@ -1,0 +1,13 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Gradient bão: tím đậm + xanh đen + xám -->
+    <gradient
+        android:startColor="#2C3E50"
+        android:centerColor="#28243A"
+        android:endColor="#0F2027"
+        android:angle="45"/>
+
+    <!-- Bo góc nhẹ -->
+    <corners android:radius="12dp"/>
+
+</shape>

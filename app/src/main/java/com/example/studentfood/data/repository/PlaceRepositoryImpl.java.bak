@@ -1,0 +1,288 @@
+package com.example.studentfood.data.repository;
+
+import com.example.studentfood.domain.model.Place;
+import com.example.studentfood.domain.repository.PlaceRepository;
+import com.example.studentfood.data.mapper.OSMMapper;
+import com.example.studentfood.data.local.dao.PlaceDAO;
+import com.example.studentfood.data.remote.api.OverpassApi;
+import com.example.studentfood.data.local.db.DBHelper;
+import com.example.studentfood.data.local.manager.FavoriteManager;
+
+import android.content.Context;
+import java.util.List;
+import java.util.Map;
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+
+
+/**
+ * PlaceRepositoryImpl - Implementation of PlaceRepository
+ * Handles data from OSM API and local cache
+ */
+public class PlaceRepositoryImpl implements PlaceRepository {
+    
+    private final Context context;
+    private final PlaceDAO placeDAO;
+    private final OverpassApi overpassApi;
+    private final FavoriteManager favoriteManager;
+    
+    // Cache for performance
+    private Map<String, Place> placeCache;
+    private long lastCacheUpdate = 0;
+    private static final long CACHE_DURATION_MS = TimeUnit.MINUTES.toMillis(5);
+    
+    public PlaceRepositoryImpl(Context context) {
+        this.context = context;
+        DBHelper dbHelper = DBHelper.getInstance(context);
+        this.placeDAO = new PlaceDAO(dbHelper.getReadableDatabase());
+        this.overpassApi = new OverpassApi();
+        this.favoriteManager = FavoriteManager.getInstance(context);
+    }
+    
+    @Override
+    public List<Place> getPlacesByType(Place.PlaceType type, double lat, double lng, double radiusKm) {
+        // Try cache first
+        if (isCacheValid()) {
+            List<Place> cachedPlaces = getPlacesFromCache(type);
+            if (!cachedPlaces.isEmpty()) {
+                return filterByLocation(cachedPlaces, lat, lng, radiusKm);
+            }
+        }
+        
+        // Try local DB
+        List<Place> localPlaces = placeDAO.getPlacesByType(type);
+        List<Place> filteredLocal = filterByLocation(localPlaces, lat, lng, radiusKm);
+        
+        if (!filteredLocal.isEmpty()) {
+            return filteredLocal;
+        }
+        
+        // Fetch from OSM API
+        return fetchFromOSM(type, lat, lng, radiusKm);
+    }
+    
+    @Override
+    public List<Place> getAllPlacesNear(double lat, double lng, double radiusKm) {
+        List<Place> allPlaces = new ArrayList<>();
+        
+        // Get all types
+        for (Place.PlaceType type : Place.PlaceType.values()) {
+            if (type != Place.PlaceType.UNKNOWN) {
+                allPlaces.addAll(getPlacesByType(type, lat, lng, radiusKm));
+            }
+        }
+        
+        return allPlaces;
+    }
+    
+    @Override
+    public Place getPlaceById(String id) {
+        // Try cache first
+        if (placeCache != null && placeCache.containsKey(id)) {
+            return placeCache.get(id);
+        }
+        
+        // Try local DB
+        Place place = placeDAO.getPlaceById(id);
+        if (place != null) {
+            return place;
+        }
+        
+        // Fetch from OSM API by ID
+        return fetchPlaceFromOSM(id);
+    }
+    
+    @Override
+    public Map<String, String> getOsmTags(String placeId) {
+        Place place = getPlaceById(placeId);
+        return place != null ? place.getOsmTags() : null;
+    }
+    
+    @Override
+    public OSMMapper.OSMData getMappedOsmData(String placeId) {
+        Map<String, String> osmTags = getOsmTags(placeId);
+        return osmTags != null ? OSMMapper.map(osmTags) : null;
+    }
+    
+    @Override
+    public void savePlace(Place place) {
+        if (place != null) {
+            placeDAO.savePlace(place);
+            updateCache(place);
+        }
+    }
+    
+    @Override
+    public void savePlaces(List<Place> places) {
+        if (places != null && !places.isEmpty()) {
+            placeDAO.savePlaces(places);
+            updateCache(places);
+        }
+    }
+    
+    @Override
+    public void refreshPlaces(double lat, double lng, double radiusKm) {
+        // Clear cache
+        placeCache = null;
+        lastCacheUpdate = 0;
+        
+        // Fetch fresh data from OSM
+        List<Place> freshPlaces = getAllPlacesNear(lat, lng, radiusKm);
+        savePlaces(freshPlaces);
+    }
+    
+    @Override
+    public List<Place> searchPlaces(String query, double lat, double lng) {
+        // Search in local cache first
+        List<Place> results = new ArrayList<>();
+        
+        if (placeCache != null) {
+            for (Place place : placeCache.values()) {
+                if (place.getName() != null && 
+                    place.getName().toLowerCase().contains(query.toLowerCase())) {
+                    results.add(place);
+                }
+            }
+        }
+        
+        // If no results, search OSM API
+        if (results.isEmpty()) {
+            results = searchOSM(query, lat, lng);
+        }
+        
+        return results;
+    }
+    
+    @Override
+    public List<Place> getFavoritePlaces(String userId) {
+        return favoriteManager.getFavoritePlaces(userId);
+    }
+    
+    @Override
+    public boolean toggleFavorite(String userId, String placeId) {
+        Place place = getPlaceById(placeId);
+        if (place != null) {
+            return favoriteManager.toggleFavorite(context, userId, place);
+        }
+        return false;
+    }
+    
+    @Override
+    public boolean isFavorite(String userId, String placeId) {
+        return favoriteManager.isFavorite(userId, placeId);
+    }
+    
+    // ==================== PRIVATE METHODS ====================
+    
+    private List<Place> fetchFromOSM(Place.PlaceType type, double lat, double lng, double radiusKm) {
+        try {
+            List<Place> places = overpassApi.fetchPlacesByType(type, lat, lng, radiusKm);
+            savePlaces(places);
+            return places;
+        } catch (Exception e) {
+            // Log error and return empty list
+            e.printStackTrace();
+            return new ArrayList<>();
+        }
+    }
+    
+    private Place fetchPlaceFromOSM(String id) {
+        try {
+            Place place = overpassApi.fetchPlaceById(id);
+            if (place != null) {
+                savePlace(place);
+            }
+            return place;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    
+    private List<Place> searchOSM(String query, double lat, double lng) {
+        try {
+            List<Place> places = overpassApi.searchPlaces(query, lat, lng);
+            savePlaces(places);
+            return places;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ArrayList<>();
+        }
+    }
+    
+    private List<Place> filterByLocation(List<Place> places, double lat, double lng, double radiusKm) {
+        List<Place> filtered = new ArrayList<>();
+        
+        for (Place place : places) {
+            if (place.getLocation() != null) {
+                double distance = calculateDistance(
+                    lat, lng, 
+                    place.getLocation().getLatitude(), 
+                    place.getLocation().getLongitude()
+                );
+                
+                if (distance <= radiusKm) {
+                    place.getLocation().setDistance(distance);
+                    filtered.add(place);
+                }
+            }
+        }
+        
+        return filtered;
+    }
+    
+    private double calculateDistance(double lat1, double lng1, double lat2, double lng2) {
+        // Haversine formula
+        double R = 6371; // Earth's radius in kilometers
+        
+        double latDistance = Math.toRadians(lat2 - lat1);
+        double lngDistance = Math.toRadians(lng2 - lng1);
+        
+        double a = Math.sin(latDistance / 2) * Math.sin(latDistance / 2)
+                + Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2))
+                * Math.sin(lngDistance / 2) * Math.sin(lngDistance / 2);
+        
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        
+        return R * c;
+    }
+    
+    private boolean isCacheValid() {
+        return placeCache != null && 
+               (System.currentTimeMillis() - lastCacheUpdate) < CACHE_DURATION_MS;
+    }
+    
+    private List<Place> getPlacesFromCache(Place.PlaceType type) {
+        List<Place> cachedPlaces = new ArrayList<>();
+        
+        if (placeCache != null) {
+            for (Place place : placeCache.values()) {
+                if (place.getType() == type) {
+                    cachedPlaces.add(place);
+                }
+            }
+        }
+        
+        return cachedPlaces;
+    }
+    
+    private void updateCache(Place place) {
+        if (placeCache == null) {
+            placeCache = new java.util.HashMap<>();
+        }
+        placeCache.put(place.getId(), place);
+        lastCacheUpdate = System.currentTimeMillis();
+    }
+    
+    private void updateCache(List<Place> places) {
+        if (placeCache == null) {
+            placeCache = new java.util.HashMap<>();
+        }
+        
+        for (Place place : places) {
+            placeCache.put(place.getId(), place);
+        }
+        
+        lastCacheUpdate = System.currentTimeMillis();
+    }
+}

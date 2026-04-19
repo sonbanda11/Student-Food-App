@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <!-- Video Player -->
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"/>
+
+    <!-- Loading indicator -->
+    <ProgressBar
+        android:id="@+id/pbVideo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:indeterminateTint="@android:color/white"
+        android:visibility="visible"/>
+
+    <!-- Gradient bottom overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/gradient"/>
+
+    <!-- Bottom info: user + caption -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="80dp">
+
+        <!-- User row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:src="@drawable/ic_person"
+                android:background="@drawable/bg_circle"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/txtUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@Nguyễn Viết Sơn"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <!-- Caption -->
+        <TextView
+            android:id="@+id/txtCaption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Caption video..."
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.3"/>
+    </LinearLayout>
+
+    <!-- Right side actions — đẩy xuống thấp hơn -->
+    <LinearLayout
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingBottom="120dp"
+        android:paddingEnd="8dp">
+
+        <!-- Like -->
+        <LinearLayout
+            android:id="@+id/btnLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/imgLike"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_like"
+                app:tint="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/txtLikeCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:layout_marginTop="3dp"/>
+        </LinearLayout>
+
+        <!-- Comment -->
+        <LinearLayout
+            android:id="@+id/btnComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_comment"
+                app:tint="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/txtCommentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:layout_marginTop="3dp"/>
+        </LinearLayout>
+
+        <!-- Share -->
+        <LinearLayout
+            android:id="@+id/btnShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_share"
+                app:tint="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/txtShareCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:layout_marginTop="3dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

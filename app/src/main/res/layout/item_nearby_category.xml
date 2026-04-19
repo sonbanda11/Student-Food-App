@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="8dp">
+
+    <!-- Icon category -->
+    <ImageView
+        android:id="@+id/imgCategory"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_fastfood"
+        android:scaleType="centerCrop"
+        android:background="@drawable/bg_circle"
+        android:padding="10dp" />
+
+    <!-- Tên category -->
+    <TextView
+        android:id="@+id/txtCategoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bún, Phở"
+        android:textSize="12sp"
+        android:textColor="#333"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginTop="4dp"
+        android:gravity="center"/>
+</LinearLayout>

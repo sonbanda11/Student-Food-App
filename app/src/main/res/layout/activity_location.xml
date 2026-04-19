@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- include toolbar -->
+    <include layout="@layout/layout_toolbar"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="@color/white">
+
+        <!-- Ô nhập địa chỉ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- search box -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_gradient_border"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_location"/>
+
+                <EditText
+                    android:id="@+id/tvLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:layout_marginStart="5dp"
+                    android:textSize="13sp"
+                    android:hint="Chọn địa điểm của bạn." />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Bọc phần danh sách để chiếm toàn bộ không gian ở giữa -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Các địa điểm đề xuất"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:paddingBottom="10dp"
+                android:textSize="16sp"/>
+
+
+            <!-- Danh sách địa điểm -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvLocation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <!-- nút mở bản đồ -->
+        <TextView
+            android:id="@+id/btnMap"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textSize="16sp"
+            android:text="Xem trên bản đồ"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bg_shadow_blue_radius"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
